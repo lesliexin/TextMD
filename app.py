@@ -7,11 +7,28 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 # Try adding your own number to this list!
-callers = {
-    "+14165581768": "Leslie",
-    "+14158675310": "Finn",
-    "+14158675311": "Chewy",
-}
+patients = {
+    "+14165581768": ["Leslie Xin", 0, "", ""],
+    "+14158675310": ["Finn Smith", 0, "", ""],
+    "+14158675311": ["Chewy White", 0, "", ""],
+    }
+
+# class Address():
+
+#     def __init__(self, unit, street, city, province):
+#         self.unit = unit
+#         self.street = street
+#         self.city = city
+#         self.province = province
+
+
+# class Patient():
+
+#     def __init__(self, name, birth_year, sex, address):
+#         self.name = unit
+#         self.street = street
+#         self.city = city
+#         self.province = province
 
 
 @app.route("/sms", methods=['GET', 'POST'])
@@ -30,8 +47,8 @@ def hello():
 
 
     from_number = request.values.get('From')
-    if from_number in callers:
-        name = callers[from_number]
+    if from_number in patients:
+        name = patients[from_number][0]
         counter += 1
     else:
         name = ""
@@ -41,24 +58,51 @@ def hello():
     # new user
     if counter == 1:
         # ask for name 
-        message = 'Hi there, what is your name? counter is {}' \
+        message = '\nHi there, what is your full name? counter is {}' \
             .format( counter)
 
     elif counter == 2:
         # greet user]
 
         if name == "":
-            callers[str(from_number)] = str(text)
-            message = 'Hi there, {}! Welcome to textMD! counter is {}' \
+            patients[str(from_number)] = [str(text), 0, ""]
+            message = '\n\nHi there, {}! Welcome to textMD! What year were you born? counter is {}' \
                 .format(text, counter)
 
         else:
-            message = 'Welcome back, {}! counter is {}' \
+            message = '\n\nWelcome back, {}! What year were you born? counter is {}' \
                 .format(name, counter)
 
+    elif counter == 3:
+        patients[str(from_number)][1] = str(text)
+        message = '\n\nWhat is your sex?'
+
+    elif counter == 4:
+        patients[str(from_number)][2] = str(text)
+        message = '\n\nNext we need your address.\nWhat is your unit number?'
+
+    elif counter == 5:
+        patients[str(from_number)][3] = str(text)
+        message = '\n\nWhat is your street name?'
+
+    elif counter == 6:
+        patients[str(from_number)][3] += ('+' + str(text))
+        message = '\n\nWhat is your street suffix? (street, avenue, trail)'
+
+    elif counter == 7:
+        patients[str(from_number)][3] += ('+' + str(text))
+        message = '\n\nWhat is your city?'
+
+    elif counter == 8:
+        patients[str(from_number)][3] += (',+' + str(text))
+        message = '\n\nWhat is your province/state?'
+    
+    elif counter == 9:
+        patients[str(from_number)][3] += (',+' + str(text))
+        message = '\n\nThank you! \n {}, {}, {}, {}' \
+            .format(patients[str(from_number)][0], patients[str(from_number)][1], patients[str(from_number)][2], patients[str(from_number)][3])
+    
     else:
-        message = 'counter is {}' \
-            .format(name, counter)
         session.clear()
 
 
