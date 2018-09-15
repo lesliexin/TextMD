@@ -1,0 +1,70 @@
+[
+    {
+        "location": "head",
+        "sublocations": [
+            "emotions",
+            "mental",
+            "face",
+            "eye",
+            "nose",
+            "vision",
+            "mouth",
+            "throat",
+            "neck",
+            "ear",
+            "scalp and hair"
+        ]
+    },
+    {
+        "location": "arms",
+        "sublocations": [
+            "hand",
+            "elbow",
+            "arm"
+        ]
+    },
+    {
+        "location": "torso",
+        "sublocations": [
+            "abdomen",
+            "chest",
+            "heart",
+            "back"
+        ]
+    },
+    {
+        "location": "digestion",
+        "sublocations": [
+            "stomach",
+            "feces and anus"
+        ]
+    },
+    {
+        "location": "pelvis",
+        "sublocations": [
+            "hip",
+            "female genitals",
+            "male genitals",
+            "urination"
+        ]
+    },
+    {
+        "location": "leg",
+        "sublocations": [
+            "ankle",
+            "knee",
+            "calf and thigh",
+            "foot"
+        ]
+    },
+    {
+        "location": "general",
+        "sublocations": [
+            "skin",
+            "nails",
+            "muscle and bone",
+            "temperature",
+            "weight"
+        ]
+    }
+]
