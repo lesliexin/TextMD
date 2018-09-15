@@ -1,0 +1,1395 @@
+[
+    {
+        "location": "head",
+        "items": [
+            {
+                "sublocation": "emotions",
+                "symptoms": [
+                    {
+                        "id": 981,
+                        "name": "agitation"
+                    },
+                    {
+                        "id": 238,
+                        "name": "anxiety"
+                    },
+                    {
+                        "id": 49,
+                        "name": "cravings"
+                    },
+                    {
+                        "id": 47,
+                        "name": "joylessness"
+                    },
+                    {
+                        "id": 85,
+                        "name": "mood swings"
+                    },
+                    {
+                        "id": 114,
+                        "name": "nervousness"
+                    },
+                    {
+                        "id": 975,
+                        "name": "sadness"
+                    }
+                ]
+            },
+            {
+                "sublocation": "mental",
+                "symptoms": [
+                    {
+                        "id": 126,
+                        "name": "difficulty in finding words"
+                    },
+                    {
+                        "id": 98,
+                        "name": "difficulty in speaking"
+                    },
+                    {
+                        "id": 53,
+                        "name": "difficulty to concentrate"
+                    },
+                    {
+                        "id": 1007,
+                        "name": "difficulty to learn"
+                    },
+                    {
+                        "id": 1005,
+                        "name": "difficulty with gait"
+                    },
+                    {
+                        "id": 128,
+                        "name": "disorientation regarding time or place"
+                    },
+                    {
+                        "id": 207,
+                        "name": "dizziness"
+                    },
+                    {
+                        "id": 43,
+                        "name": "drowsiness"
+                    },
+                    {
+                        "id": 92,
+                        "name": "early satiety"
+                    },
+                    {
+                        "id": 982,
+                        "name": "feeling faint"
+                    },
+                    {
+                        "id": 125,
+                        "name": "forgetfulness"
+                    },
+                    {
+                        "id": 976,
+                        "name": "hallucination"
+                    },
+                    {
+                        "id": 9,
+                        "name": "headache"
+                    },
+                    {
+                        "id": 120,
+                        "name": "impaired balance"
+                    },
+                    {
+                        "id": 262,
+                        "name": "increased drive"
+                    },
+                    {
+                        "id": 220,
+                        "name": "increased touch sensitivity"
+                    },
+                    {
+                        "id": 235,
+                        "name": "memory gap"
+                    },
+                    {
+                        "id": 44,
+                        "name": "nausea"
+                    },
+                    {
+                        "id": 241,
+                        "name": "sleepiness with spontaneous falling asleep"
+                    },
+                    {
+                        "id": 52,
+                        "name": "sleeplessness"
+                    },
+                    {
+                        "id": 201,
+                        "name": "tingling"
+                    },
+                    {
+                        "id": 16,
+                        "name": "tiredness"
+                    },
+                    {
+                        "id": 988,
+                        "name": "trouble understanding speech"
+                    },
+                    {
+                        "id": 144,
+                        "name": "unconsciousness, short"
+                    }
+                ]
+            },
+            {
+                "sublocation": "face",
+                "symptoms": [
+                    {
+                        "id": 170,
+                        "name": "cheek swelling"
+                    },
+                    {
+                        "id": 970,
+                        "name": "facial swelling"
+                    },
+                    {
+                        "id": 150,
+                        "name": "pallor"
+                    },
+                    {
+                        "id": 130,
+                        "name": "problems with the sense of touch in the feet"
+                    }
+                ]
+            },
+            {
+                "sublocation": "throat",
+                "symptoms": [
+                    {
+                        "id": 233,
+                        "name": "bloody cough"
+                    },
+                    {
+                        "id": 46,
+                        "name": "burning in the throat"
+                    },
+                    {
+                        "id": 228,
+                        "name": "cough with sputum"
+                    },
+                    {
+                        "id": 93,
+                        "name": "difficulty in swallowing"
+                    },
+                    {
+                        "id": 122,
+                        "name": "hiccups"
+                    },
+                    {
+                        "id": 121,
+                        "name": "hoarseness"
+                    },
+                    {
+                        "id": 973,
+                        "name": "itching in the mouth or throat"
+                    },
+                    {
+                        "id": 133,
+                        "name": "night cough"
+                    },
+                    {
+                        "id": 203,
+                        "name": "pain on swallowing"
+                    },
+                    {
+                        "id": 13,
+                        "name": "sore throat"
+                    },
+                    {
+                        "id": 64,
+                        "name": "sputum"
+                    },
+                    {
+                        "id": 30,
+                        "name": "wheezing"
+                    }
+                ]
+            },
+            {
+                "sublocation": "neck",
+                "symptoms": [
+                    {
+                        "id": 72,
+                        "name": "halo"
+                    },
+                    {
+                        "id": 136,
+                        "name": "neck pain"
+                    },
+                    {
+                        "id": 234,
+                        "name": "neck stiffness"
+                    },
+                    {
+                        "id": 169,
+                        "name": "swollen glands in the neck"
+                    }
+                ]
+            },
+            {
+                "sublocation": "mouth",
+                "symptoms": [
+                    {
+                        "id": 93,
+                        "name": "difficulty in swallowing"
+                    },
+                    {
+                        "id": 272,
+                        "name": "dry mouth"
+                    },
+                    {
+                        "id": 204,
+                        "name": "increased salivation"
+                    },
+                    {
+                        "id": 40,
+                        "name": "increased thirst"
+                    },
+                    {
+                        "id": 973,
+                        "name": "itching in the mouth or throat"
+                    },
+                    {
+                        "id": 35,
+                        "name": "lip swelling"
+                    },
+                    {
+                        "id": 205,
+                        "name": "lockjaw"
+                    },
+                    {
+                        "id": 135,
+                        "name": "mouth pain"
+                    },
+                    {
+                        "id": 97,
+                        "name": "mouth ulcers"
+                    },
+                    {
+                        "id": 286,
+                        "name": "pain when chewing"
+                    },
+                    {
+                        "id": 264,
+                        "name": "shiny red tongue"
+                    },
+                    {
+                        "id": 95,
+                        "name": "sneezing"
+                    },
+                    {
+                        "id": 980,
+                        "name": "tongue burning"
+                    },
+                    {
+                        "id": 977,
+                        "name": "tongue swelling"
+                    },
+                    {
+                        "id": 1008,
+                        "name": "toothache"
+                    }
+                ]
+            },
+            {
+                "sublocation": "nose",
+                "symptoms": [
+                    {
+                        "id": 250,
+                        "name": "breathing-related pains"
+                    },
+                    {
+                        "id": 288,
+                        "name": "burning nose"
+                    },
+                    {
+                        "id": 96,
+                        "name": "itching in the nose"
+                    },
+                    {
+                        "id": 38,
+                        "name": "nosebleed"
+                    },
+                    {
+                        "id": 14,
+                        "name": "runny nose"
+                    },
+                    {
+                        "id": 95,
+                        "name": "sneezing"
+                    },
+                    {
+                        "id": 28,
+                        "name": "stuffy nose"
+                    }
+                ]
+            },
+            {
+                "sublocation": "eye",
+                "symptoms": [
+                    {
+                        "id": 176,
+                        "name": "bleeding in the conjunctiva of the eye"
+                    },
+                    {
+                        "id": 244,
+                        "name": "drooping eyelid"
+                    },
+                    {
+                        "id": 273,
+                        "name": "dry eyes"
+                    },
+                    {
+                        "id": 242,
+                        "name": "eye blinking"
+                    },
+                    {
+                        "id": 287,
+                        "name": "eye pain"
+                    },
+                    {
+                        "id": 33,
+                        "name": "eye redness"
+                    },
+                    {
+                        "id": 208,
+                        "name": "eyelid swelling"
+                    },
+                    {
+                        "id": 209,
+                        "name": "eyelids sticking together"
+                    },
+                    {
+                        "id": 76,
+                        "name": "feeling of foreign body in the eye"
+                    },
+                    {
+                        "id": 73,
+                        "name": "itching eyes"
+                    },
+                    {
+                        "id": 210,
+                        "name": "loss of eye lashes"
+                    },
+                    {
+                        "id": 258,
+                        "name": "protrusion of the eyes"
+                    },
+                    {
+                        "id": 69,
+                        "name": "sensitivity to glare"
+                    },
+                    {
+                        "id": 211,
+                        "name": "tears"
+                    },
+                    {
+                        "id": 106,
+                        "name": "yellowish discoloration of the white part of the eye"
+                    }
+                ]
+            },
+            {
+                "sublocation": "vision",
+                "symptoms": [
+                    {
+                    "id": 57,
+                        "name": "blackening of vision"
+                    },
+                    {
+                        "id": 77,
+                        "name": "blurred vision"
+                    },
+                    {
+                        "id": 75,
+                        "name": "burning eyes"
+                    },
+                    {
+                        "id": 71,
+                        "name": "double vision"
+                    },
+                    {
+                        "id": 270,
+                        "name": "double vision, acute-onset"
+                    },
+                    {
+                        "id": 70,
+                        "name": "impaired light-dark adaptation"
+                    },
+                    {
+                        "id": 137,
+                        "name": "oversensitivity to light"
+                    },
+                    {
+                        "id": 68,
+                        "name": "vision impairment"
+                    },
+                    {
+                        "id": 213,
+                        "name": "vision impairment for far objects"
+                    },
+                    {
+                        "id": 166,
+                        "name": "vision impairment for near objects"
+                    },
+                    {
+                        "id": 66,
+                        "name": "visual field loss"
+                    }
+                ]
+            },
+            {
+                "sublocation": "ear",
+                "symptoms": [
+                    {
+                        "id": 87,
+                        "name": "earache"
+                    },
+                    {
+                        "id": 0,
+                        "name": "test"
+                    },
+                    {
+                        "id": 86,
+                        "name": "feeling of pressure in the ear"
+                    },
+                    {
+                        "id": 206,
+                        "name": "hearing loss"
+                    },
+                    {
+                        "id": 90,
+                        "name": "impaired hearing"
+                    },
+                    {
+                        "id": 88,
+                        "name": "itching in the ear"
+                    },
+                    {
+                        "id": 78,
+                        "name": "ringing in the ear"
+                    },
+                    {
+                        "id": 102,
+                        "name": "sensitivity to noise"
+                    }
+                ]
+            },
+            {
+                "sublocation": "scalp and hair",
+                "symptoms": [
+                    {
+                        "id": 239,
+                        "name": "bold area among hair on the head"
+                    },
+                    {
+                        "id": 245,
+                        "name": "flaking skin on the head"
+                    },
+                    {
+                        "id": 152,
+                        "name": "hair loss"
+                    },
+                    {
+                        "id": 247,
+                        "name": "itching on head"
+                    },
+                    {
+                        "id": 269,
+                        "name": "scalp redness"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "location": "arms",
+        "items": [
+            {
+                "sublocation": "arm",
+                "symptoms": [
+                    {
+                        "id": 1009,
+                        "name": "arm pain"
+                    },
+                    {
+                        "id": 971,
+                        "name": "arm swelling"
+                    },
+                    {
+                        "id": 202,
+                        "name": "muscular atrophy of the arm"
+                    },
+                    {
+                        "id": 168,
+                        "name": "muscular weakness in the arm"
+                    },
+                    {
+                        "id": 221,
+                        "name": "numbness in the arm"
+                    },
+                    {
+                        "id": 12,
+                        "name": "pain in the limbs"
+                    },
+                    {
+                        "id": 251,
+                        "name": "pain radiating to the arm"
+                    },
+                    {
+                        "id": 248,
+                        "name": "swollen glands in the armpit"
+                    }
+                ]
+            },
+            {
+                "sublocation": "hand",
+                "symptoms": [
+                    {
+                        "id": 978,
+                        "name": "cold hands"
+                    },
+                    {
+                        "id": 1013,
+                        "name": "finger pain"
+                    },
+                    {
+                        "id": 1012,
+                        "name": "finger swelling"
+                    },
+                    {
+                        "id": 186,
+                        "name": "hand pain"
+                    },
+                    {
+                        "id": 148,
+                        "name": "hand swelling"
+                    },
+                    {
+                        "id": 178,
+                        "name": "limited mobility of the fingers"
+                    },
+                    {
+                        "id": 200,
+                        "name": "numbness of the hands"
+                    },
+                    {
+                        "id": 115,
+                        "name": "tremor at rest"
+                    },
+                    {
+                        "id": 132,
+                        "name": "tremor on movement"
+                    }
+                ]
+            },
+            {
+                "sublocation": "elbow",
+                "symptoms": [
+                    {
+                        "id": 1011,
+                        "name": "elbow pain"
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "location": "torso",
+        "items": [
+            {
+                "sublocation": "abdomen",
+                "symptoms": [
+                    {
+                        "id": 188,
+                        "name": "abdominal guarding"
+                    },
+                    {
+                        "id": 10,
+                        "name": "abdominal pain"
+                    },
+                    {
+                        "id": 223,
+                        "name": "abdominal pain associated with menstruation"
+                    },
+                    {
+                        "id": 192,
+                        "name": "bulging abdominal wall"
+                    },
+                    {
+                        "id": 94,
+                        "name": "cramps"
+                    },
+                    {
+                        "id": 989,
+                        "name": "distended abdomen"
+                    },
+                    {
+                        "id": 174,
+                        "name": "lower abdominal pain"
+                    },
+                    {
+                        "id": 191,
+                        "name": "rebound tenderness"
+                    },
+                    {
+                        "id": 183,
+                        "name": "side pain"
+                    },
+                    {
+                        "id": 972,
+                        "name": "weakness or numbness on right or left side of body"
+                    }
+                ]
+            },
+            {
+                "sublocation": "chest",
+                "symptoms": [
+                    {
+                        "id": 250,
+                        "name": "breathing-related pains"
+                    },
+                    {
+                        "id": 153,
+                        "name": "fast, deepened breathing"
+                    },
+                    {
+                        "id": 17,
+                        "name": "chest pain"
+                    },
+                    {
+                        "id": 31,
+                        "name": "chest tightness"
+                    },
+                    {
+                        "id": 261,
+                        "name": "lump in the breast"
+                    },
+                    {
+                        "id": 29,
+                        "name": "shortness of breath"
+                    },
+                    {
+                        "id": 30,
+                        "name": "wheezing"
+                    }
+                ]
+            },
+            {
+                "sublocation": "heart",
+                "symptoms": [
+                    {
+                        "id": 984,
+                        "name": "absence of a pulse"
+                    },
+                    {
+                        "id": 985,
+                        "name": "heart murmur"
+                    },
+                    {
+                        "id": 45,
+                        "name": "heartburn"
+                    },
+                    {
+                        "id": 986,
+                        "name": "irregular heartbeat"
+                    },
+                    {
+                        "id": 37,
+                        "name": "palpitations"
+                    }
+                ]
+            },
+            {
+                "sublocation": "back",
+                "symptoms": [
+                    {
+                        "id": 998,
+                        "name": "back deformity"
+                    },
+                    {
+                        "id": 104,
+                        "name": "back pain"
+                    },
+                    {
+                        "id": 260,
+                        "name": "curvature of the spine"
+                    },
+                    {
+                        "id": 72,
+                        "name": "halo"
+                    },
+                    {
+                        "id": 167,
+                        "name": "limited mobility of the back"
+                    },
+                    {
+                        "id": 263,
+                        "name": "lower-back pain"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "location": "digestion",
+        "items": [
+            {
+                "sublocation": "stomach",
+                "symptoms": [
+                    {
+                        "id": 48,
+                        "name": "bloated feeling in the stomach"
+                    },
+                    {
+                        "id": 92,
+                        "name": "early satiety"
+                    },
+                    {
+                        "id": 154,
+                        "name": "flatulence"
+                    },
+                    {
+                        "id": 131,
+                        "name": "increased appetite"
+                    },
+                    {
+                        "id": 44,
+                        "name": "nausea"
+                    },
+                    {
+                        "id": 54,
+                        "name": "reduced appetite"
+                    },
+                    {
+                        "id": 179,
+                        "name": "stomach burning"
+                    },
+                    {
+                        "id": 101,
+                        "name": "vomiting"
+                    },
+                    {
+                        "id": 181,
+                        "name": "vomiting blood"
+                    }
+                ]
+            },
+            {
+                "sublocation": "defecation and anus",
+                "symptoms": [
+                    {
+                        "id": 180,
+                        "name": "black stools"
+                    },
+                    {
+                        "id": 190,
+                        "name": "blood in stool"
+                    },
+                    {
+                        "id": 50,
+                        "name": "diarrhea"
+                    },
+                    {
+                        "id": 79,
+                        "name": "difficult defecation"
+                    },
+                    {
+                        "id": 83,
+                        "name": "fatty defecation"
+                    },
+                    {
+                        "id": 154,
+                        "name": "flatulence"
+                    },
+                    {
+                        "id": 84,
+                        "name": "foul smelling defecation"
+                    },
+                    {
+                        "id": 80,
+                        "name": "hard defecation"
+                    },
+                    {
+                        "id": 81,
+                        "name": "incomplete defecation"
+                    },
+                    {
+                        "id": 999,
+                        "name": "itching of the anus"
+                    },
+                    {
+                        "id": 82,
+                        "name": "less than 3 defecations per week"
+                    },
+                    {
+                        "id": 990,
+                        "name": "pain of the anus"
+                    },
+                    {
+                        "id": 189,
+                        "name": "painful defecation"
+                    },
+                    {
+                        "id": 265,
+                        "name": "uncontrolled defecation"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "location": "pelvis",
+        "items": [
+            {
+                "sublocation": "hip",
+                "symptoms": [
+                    {
+                        "id": 993,
+                        "name": "hip deformity"
+                    },
+                    {
+                        "id": 196,
+                        "name": "hip pain"
+                    },
+                    {
+                        "id": 1000,
+                        "name": "limited mobility of the hip"
+                    }
+                ]
+            },
+            {
+                "sublocation": "female genitals",
+                "symptoms": [
+                    {
+                        "id": 284,
+                        "name": "bleeding from vagina"
+                    },
+                    {
+                        "id": 110,
+                        "name": "genital warts"
+                    },
+                    {
+                        "id": 262,
+                        "name": "increased drive"
+                    },
+                    {
+                        "id": 268,
+                        "name": "itching or burning in the genital area"
+                    },
+                    {
+                        "id": 112,
+                        "name": "menstruation disorder"
+                    },
+                    {
+                        "id": 123,
+                        "name": "missed period"
+                    },
+                    {
+                        "id": 173,
+                        "name": "purulent discharge from the vagina"
+                    },
+                    {
+                        "id": 236,
+                        "name": "swelling in the genital area"
+                    },
+                    {
+                        "id": 249,
+                        "name": "swollen glands in the groin"
+                    }
+                ]
+            },
+            {
+                "sublocation": "male genitals",
+                "symptoms": [
+                    {
+                        "id": 110,
+                        "name": "genital warts"
+                    },
+                    {
+                        "id": 113,
+                        "name": "impairment of male potency"
+                    },
+                    {
+                        "id": 262,
+                        "name": "increased drive"
+                    },
+                    {
+                        "id": 268,
+                        "name": "itching or burning in the genital area"
+                    },
+                    {
+                        "id": 266,
+                        "name": "malposition of the testicles"
+                    },
+                    {
+                        "id": 236,
+                        "name": "swelling in the genital area"
+                    },
+                    {
+                        "id": 267,
+                        "name": "swelling of the testicles"
+                    },
+                    {
+                        "id": 249,
+                        "name": "swollen glands in the groin"
+                    },
+                    {
+                        "id": 222,
+                        "name": "testicular pain"
+                    }
+                ]
+            },
+            {
+                "sublocation": "urination",
+                "symptoms": [
+                    {
+                        "id": 107,
+                        "name": "burning sensation when urinating"
+                    },
+                    {
+                        "id": 108,
+                        "name": "dark urine"
+                    },
+                    {
+                        "id": 163,
+                        "name": "decreased urine stream"
+                    },
+                    {
+                        "id": 165,
+                        "name": "delayed start to urination"
+                    },
+                    {
+                        "id": 162,
+                        "name": "dribbling after urination"
+                    },
+                    {
+                        "id": 164,
+                        "name": "feeling of residual urine"
+                    },
+                    {
+                        "id": 59,
+                        "name": "frequent urination"
+                    },
+                    {
+                        "id": 39,
+                        "name": "increased urine quantity"
+                    },
+                    {
+                        "id": 109,
+                        "name": "painful urination"
+                    },
+                    {
+                        "id": 172,
+                        "name": "purulent discharge from the urethra"
+                    },
+                    {
+                        "id": 160,
+                        "name": "urge to urinate"
+                    },
+                    {
+                        "id": 161,
+                        "name": "urination during the night"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "location": "leg",
+        "items": [
+            {
+                "sublocation": "ankle",
+                "symptoms": [
+                    {
+                        "id": 996,
+                        "name": "ankle deformity"
+                    },
+                    {
+                        "id": 147,
+                        "name": "ankle swelling"
+                    },
+                    {
+                        "id": 992,
+                        "name": "limited mobility of the ankle"
+                    },
+                    {
+                        "id": 185,
+                        "name": "stress-related leg pain"
+                    }
+                ]
+            },
+            {
+                "sublocation": "foot",
+                "symptoms": [
+                    {
+                        "id": 89,
+                        "name": "cold feet"
+                    },
+                    {
+                        "id": 255,
+                        "name": "foot pain"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "foot swelling"
+                    },
+                    {
+                        "id": 997,
+                        "name": "toe deformity"
+                    },
+                    {
+                        "id": 1003,
+                        "name": "toe swelling"
+                    }
+                ]
+            },
+            {
+                "sublocation": "calf and thigh",
+                "symptoms": [
+                    {
+                        "id": 1006,
+                        "name": "enlarged calf"
+                    },
+                    {
+                        "id": 145,
+                        "name": "feeling of tension in the legs"
+                    },
+                    {
+                        "id": 146,
+                        "name": "leg cramps"
+                    },
+                    {
+                        "id": 1010,
+                        "name": "leg pain"
+                    },
+                    {
+                        "id": 231,
+                        "name": "leg swelling"
+                    },
+                    {
+                        "id": 143,
+                        "name": "leg ulcer"
+                    },
+                    {
+                        "id": 195,
+                        "name": "limited mobility of the leg"
+                    },
+                    {
+                        "id": 252,
+                        "name": "muscular atrophy in the leg"
+                    },
+                    {
+                        "id": 253,
+                        "name": "muscular weakness in the leg"
+                    },
+                    {
+                        "id": 254,
+                        "name": "numbness in the leg"
+                    },
+                    {
+                        "id": 142,
+                        "name": "pain in the calves"
+                    },
+                    {
+                        "id": 12,
+                        "name": "pain in the limbs"
+                    },
+                    {
+                        "id": 103,
+                        "name": "pain radiating to the leg"
+                    },
+                    {
+                        "id": 185,
+                        "name": "stress-related leg pain"
+                    }
+                ]
+            },
+            {
+                "sublocation": "knee",
+                "symptoms": [
+                    {
+                        "id": 994,
+                        "name": "knee deformity"
+                    },
+                    {
+                        "id": 256,
+                        "name": "knee pain"
+                    },
+                    {
+                        "id": 195,
+                        "name": "limited mobility of the leg"
+                    },
+                    {
+                        "id": 185,
+                        "name": "stress-related leg pain"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "location": "general",
+        "items": [
+            {
+                "sublocation": "skin",
+                "symptoms": [
+                    {
+                        "id": 24,
+                        "name": "blackhead"
+                    },
+                    {
+                        "id": 991,
+                        "name": "blue colored skin"
+                    },
+                    {
+                        "id": 240,
+                        "name": "blue spot on skin"
+                    },
+                    {
+                        "id": 218,
+                        "name": "coarsening of the skin structure"
+                    },
+                    {
+                        "id": 134,
+                        "name": "crusting"
+                    },
+                    {
+                        "id": 151,
+                        "name": "dry skin"
+                    },
+                    {
+                        "id": 214,
+                        "name": "flaking skin"
+                    },
+                    {
+                        "id": 245,
+                        "name": "flaking skin on the head"
+                    },
+                    {
+                        "id": 62,
+                        "name": "formation of blisters on a skin area"
+                    },
+                    {
+                        "id": 184,
+                        "name": "hardening of the skin"
+                    },
+                    {
+                        "id": 65,
+                        "name": "irregular mole"
+                    },
+                    {
+                        "id": 21,
+                        "name": "itching of skin"
+                    },
+                    {
+                        "id": 232,
+                        "name": "marked veins"
+                    },
+                    {
+                        "id": 215,
+                        "name": "moist and softened skin"
+                    },
+                    {
+                        "id": 63,
+                        "name": "non-healing skin wound"
+                    },
+                    {
+                        "id": 1001,
+                        "name": "scar"
+                    },
+                    {
+                        "id": 26,
+                        "name": "skin lesion"
+                    },
+                    {
+                        "id": 25,
+                        "name": "skin nodules"
+                    },
+                    {
+                        "id": 124,
+                        "name": "skin rash"
+                    },
+                    {
+                        "id": 61,
+                        "name": "skin redness"
+                    },
+                    {
+                        "id": 217,
+                        "name": "skin thickening"
+                    },
+                    {
+                        "id": 34,
+                        "name": "skin wheal"
+                    },
+                    {
+                        "id": 243,
+                        "name": "tick"
+                    },
+                    {
+                        "id": 201,
+                        "name": "tingling"
+                    },
+                    {
+                        "id": 187,
+                        "name": "wound"
+                    },
+                    {
+                        "id": 105,
+                        "name": "yellow colored skin"
+                    }
+                ]
+            },
+            {
+                "sublocation": "muscle and bone",
+                "symptoms": [
+                    {
+                        "id": 156,
+                        "name": "bone fracture"
+                    },
+                    {
+                        "id": 197,
+                        "name": "immobilization"
+                    },
+                    {
+                        "id": 257,
+                        "name": "involuntary movements"
+                    },
+                    {
+                        "id": 194,
+                        "name": "joint effusion"
+                    },
+                    {
+                        "id": 198,
+                        "name": "joint instability"
+                    },
+                    {
+                        "id": 27,
+                        "name": "joint pain"
+                    },
+                    {
+                        "id": 230,
+                        "name": "joint redness"
+                    },
+                    {
+                        "id": 193,
+                        "name": "joint swelling"
+                    },
+                    {
+                        "id": 983,
+                        "name": "morning stiffness"
+                    },
+                    {
+                        "id": 177,
+                        "name": "muscle pain"
+                    },
+                    {
+                        "id": 119,
+                        "name": "muscle stiffness"
+                    },
+                    {
+                        "id": 987,
+                        "name": "muscle weakness"
+                    },
+                    {
+                        "id": 155,
+                        "name": "pain in the bones"
+                    },
+                    {
+                        "id": 140,
+                        "name": "paralysis"
+                    },
+                    {
+                        "id": 115,
+                        "name": "tremor at rest"
+                    },
+                    {
+                        "id": 132,
+                        "name": "tremor on movement"
+                    }
+                ]
+            },
+            {
+                "sublocation": "nails",
+                "symptoms": [
+                    {
+                        "id": 979,
+                        "name": "brittleness of nails"
+                    },
+                    {
+                        "id": 91,
+                        "name": "changes in the nails"
+                    },
+                    {
+                        "id": 216,
+                        "name": "discoloration of nails"
+                    }
+                ]
+            },
+            {
+                "sublocation": "temperature",
+                "symptoms": [
+                    {
+                        "id": 175,
+                        "name": "chills"
+                    },
+                    {
+                        "id": 139,
+                        "name": "cold sweats"
+                    },
+                    {
+                        "id": 11,
+                        "name": "fever"
+                    },
+                    {
+                        "id": 149,
+                        "name": "hot flushes"
+                    },
+                    {
+                        "id": 1004,
+                        "name": "night sweats"
+                    },
+                    {
+                        "id": 60,
+                        "name": "sensitivity to cold"
+                    },
+                    {
+                        "id": 138,
+                        "name": "sweating"
+                    }
+                ]
+            },
+            {
+                "sublocation": "weight and activity",
+                "symptoms": [
+                    {
+                        "id": 157,
+                        "name": "overweight"
+                    },
+                    {
+                        "id": 118,
+                        "name": "physical inactivity"
+                    },
+                    {
+                        "id": 116,
+                        "name": "underweight"
+                    },
+                    {
+                        "id": 23,
+                        "name": "weight gain"
+                    },
+                    {
+                        "id": 22,
+                        "name": "weight loss"
+                    }
+                ]
+            }
+        ]
+    }
+]
