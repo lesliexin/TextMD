@@ -1,20 +1,3 @@
-
-# @app.route("/sms", methods=['GET', 'POST'])
-# def sms_ahoy_reply():
-#     """Respond to incoming messages with a friendly SMS."""
-#     # Start our response
-#     resp = MessagingResponse()
-
-#     # Add a message
-#     resp.message("Welcome to TextMD!")
-
-#     return str(resp)
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
-
-
-
 from flask import Flask, request, session
 from twilio.twiml.messaging_response import MessagingResponse
 
