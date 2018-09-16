@@ -15,6 +15,7 @@ patients = {
     "+14165581768": ["Leslie Xin", 0, "", "", "location", "sublocation",[]],
     "+14158675310": ["Finn Smith", 0, "", "", "location", "sublocation",[]],
     "+14158675311": ["Chewy White", 0, "", "", "location", "sublocation",[]],
+    "+14166299630": ["Sherry", 0, "", "", "location", "sublocation",[]],
 }
 
 '''
@@ -47,6 +48,9 @@ def hello():
     # Get user text
     text = request.values.get("Body", None)
 
+    if text == "clear":
+        session.clear()
+
     from_number = request.values.get("From")
     if from_number in patients:
         name = patients[from_number][0]
@@ -76,11 +80,13 @@ def hello():
             message = "\n\nWhat is your sex (male/female)?"
         except ValueError:
             counter -= 1
+            session["counter"] = counter
             message = "Sorry, we do not understand. Please enter your birth year."
 
     elif counter == 4:
-        if str(text).lower() != "male" or str(text).lower() != "female":
+        if str(text).lower() != "male" and str(text).lower() != "female":
             counter -= 1
+            session["counter"] = counter
             message = "Sorry, we do not understand. Please enter your sex."
         else:
             patients[str(from_number)][2] = str(text)
@@ -93,6 +99,7 @@ def hello():
             message = "\n\nWhat is your street name?"
         except:
             counter -= 1
+            session["counter"] = counter
             message = "Sorry, we do not understand. Please enter your unit number."
 
     elif counter == 6:
@@ -116,9 +123,7 @@ def hello():
                 location_string += location_choices[i]
             else:
                 location_string += ", " + location_choices[i]
-        message = "\n\nThank you! \n {}, {}, {}, {}. Now, please tell us where your discomfort is located. Choose from: " + location_string \
-            .format(patients[str(from_number)][0], patients[str(from_number)][1], patients[str(from_number)][2],
-                    patients[str(from_number)][3])
+        message = "Now, please tell us where your discomfort is located. Choose from: " + location_string 
 
     elif counter == 10:
         patients[str(from_number)][4] = str(text).lower()
@@ -146,25 +151,35 @@ def hello():
         symptom_array = str(text).lower().split(",")
         symptom_ids = []
         for symptom in symptom_array:
+            print(symptom)
             symptom_ids.append(get_symptom_id(symptom))
+            print(symptom_ids)
+
+        if patients[str(from_number)][1] == None:
+            print('year is null')
+            return 
+        if patients[str(from_number)][2] == None:
+            print('sex is null')
+            return
+        print(symptom_ids)
         json_diagnosis = get_diagnosis_json(symptom_ids, patients[str(from_number)][2], str(patients[str(from_number)][1]))
         issues = get_issue_names(json_diagnosis)
         accuracies = get_issue_accuracy(json_diagnosis)
         suggested_specialists = get_suggested_specialists(json_diagnosis)
-        lat_and_lng = get_geocode(patients[str(from_number)][3])
-        doc_recommendations = get_nearby_doctors(suggested_specialists[0][len(suggested_specialists[0] - 1)], lat_and_lng)
-        num_docs = len(doc_recommendations)
-        num_display = 3 if num_docs > 3 else num_docs
+        # lat_and_lng = get_geocode(patients[str(from_number)][3])
+        # doc_recommendations = get_nearby_doctors(suggested_specialists[0][0], lat_and_lng)
+        # num_docs = len(doc_recommendations)
+        # num_display = 3 if num_docs > 3 else num_docs
         message = "In order of most likely to least likely, your diagnosis is: "
         for j in range(len(issues)):
             if j == len(issues) - 1:
-                message += issues[j] + " with an accuracy of" + str(accuracies[j] + ".")
+                message += issues[j] + " with an accuracy of " + str(accuracies[j]) + "."
             else:
-                message += issues[j] + " with an accuracy of" + str(accuracies[j] + ";")
-        message += " We suggest you visit:"
-        i = 0
-        while i < num_display:
-            message += doc_recommendations[i].name + " at" + doc_recommendations[i].address + " with rating " + doc_recommendations[i].ratings + "/5. Open now: " + doc_recommendations[i].is_open + ". "
+                message += issues[j] + " with an accuracy of " + str(accuracies[j]) + ";"
+        # message += " We suggest you visit:"
+        # i = 0
+        # while i < num_display:
+        #     message += str(doc_recommendations[i].name) + " at" + str(doc_recommendations[i].address) + " with rating " + str(doc_recommendations[i].ratings) + "/5. Open now: " + str(doc_recommendations[i].is_open) + ". "
     
     else:
         session.clear()
