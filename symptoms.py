@@ -41,8 +41,8 @@ def get_symptoms(sublocation):
     pprint.pprint(symp)
     return symp
 
-# get_symptom_id takes the symptom and returns an array of symptom IDs to be 
-#   passed to ApiMedic for diagnosis
+# get_symptom_id takes the symptom and returns a symptom ID to be passed to 
+#   ApiMedic for diagnosis
 def get_symptom_id(symptom):
     id = 0
     query = sympcol.find( { "name": symptom } )
