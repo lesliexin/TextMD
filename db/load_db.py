@@ -1,3 +1,6 @@
+# Loads the TextMD database
+# Only needs to be run to refresh data or to initiate a new cluster
+
 import json
 import pymongo
 
