@@ -52,7 +52,6 @@ def get_nearby_doctors(keyword, geocode):
         all_recommendations = []
         for i in range(num_doctors):
             name = json_results[i]["name"]
-            # print(json_results[i])
             if "opening_hours" in json_results[i]:
                 is_open = json_results[i]["opening_hours"]["open_now"]
             else:
