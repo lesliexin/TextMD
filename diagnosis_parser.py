@@ -1,8 +1,8 @@
 import json
 from diagnosis_provider import get_diagnosis_json
 
-# Placeholder values for now
-symptoms = [233] # Change to function call
+# Placeholder values for testing at the moment
+symptoms = [233,17] # Change to function call
 gender = "male" # Change to function call
 year_of_birth = "1988" # Change to function call
 
@@ -43,16 +43,3 @@ def get_suggested_specialists(json_diagnosis):
         suggested_specialists.append(specialists)
         i += 1
     return suggested_specialists
-
-
-'''
-Tests
-
-specialists = get_suggested_specialists(json_diagnosis)
-
-for specialist in specialists:
-    for s in specialist:
-        print(s)
-
-print(json_diagnosis[0]["Issue"]["Name"])
-'''
