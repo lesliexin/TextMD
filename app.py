@@ -1,6 +1,6 @@
 from flask import Flask, request, session
 from twilio.twiml.messaging_response import MessagingResponse
-from symptoms_options import get_locations, get_sublocations, get_symptoms
+from symptoms_options import get_locations, get_sublocations, get_symptoms, get_symptom_id
 from diagnosis_parser import get_issue_names, get_issue_accuracy, get_suggested_specialists
 from doctor_recommendation_provider import get_geocode, get_nearby_doctors
 
@@ -11,12 +11,12 @@ app.config.from_object(__name__)
 
 # Try adding your own number to this list!
 patients = {
-    "+14165581768": ["Leslie Xin", 0, "", ""],
-    "+14158675310": ["Finn Smith", 0, "", ""],
-    "+14158675311": ["Chewy White", 0, "", ""],
+    "+14165581768": ["Leslie Xin", 0, "sex", "address","location", "sublocation", []]
+    "+14158675310": ["Finn Smith", 0,  "address","location", "sublocation", []]
+    "+14158675311": ["Chewy White", 0,  "address","location", "sublocation", []]
     }
 
-
+           
 '''
 class Address():
     def __init__(self, unit, street, city, province):
@@ -116,9 +116,31 @@ def hello():
     
     elif counter == 9:
         patients[str(from_number)][3] += (',+' + str(text))
-        message = "\n\nThank you! \n {}, {}, {}, {}" \
-            .format(patients[str(from_number)][0], patients[str(from_number)][1], patients[str(from_number)][2], patients[str(from_number)][3])
-    
+        # message = "\n\nThank you! \n {}, {}, {}, {}" \
+        #     .format(patients[str(from_number)][0], patients[str(from_number)][1], patients[str(from_number)][2], patients[str(from_number)][3])
+        message = "\n\nWhere is your discomfort located? Choose one of the following options: "
+        
+        body_part_list = symptoms_options.get_locations()
+
+        for part in body_part_list:
+            message += "\n" + part 
+
+     elif counter == 10:
+        # patients[str(from_number)][3] += (',+' + str(text))
+        # message = "\n\nThank you! \n {}, {}, {}, {}" \
+        #     .format(patients[str(from_number)][0], patients[str(from_number)][1], patients[str(from_number)][2], patients[str(from_number)][3])
+        message = "\n\nWhere is your discomfort located? Choose one of the following options: "
+        
+        subbody_part_list = symptoms_options.get_sublocations(patients[str(from_number)][4])
+
+        for part in body_part_list:
+            message += "\n" + part 
+
+        
+
+
+
+
     else:
         session.clear()
 
