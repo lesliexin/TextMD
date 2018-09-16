@@ -69,9 +69,9 @@ def hello():
         # Greeting
         if name == "":
             patients[str(from_number)] = []
-            message = "\n\nHi there! Welcome to TextMD! What year were you born?"
+            message = "\n\nHi there, {}! Welcome to TextMD! What year were you born?"
         else:
-            message = "\n\nWelcome back! What year were you born?"
+            message = "\n\nWelcome back, {}! What year were you born?"
 
     elif counter == 3:
         try: 
@@ -151,41 +151,37 @@ def hello():
         symptom_array = str(text).lower().split(",")
         symptom_ids = []
         for symptom in symptom_array:
-            # print(symptom)
+            print(symptom)
             symptom_ids.append(get_symptom_id(symptom))
-            # print(symptom_ids)
+            print(symptom_ids)
 
         if patients[str(from_number)][1] == None:
-            # print('year is null')
+            print('year is null')
             return 
         if patients[str(from_number)][2] == None:
-            # print('sex is null')
+            print('sex is null')
             return
         print(symptom_ids)
         json_diagnosis = get_diagnosis_json(symptom_ids, patients[str(from_number)][2], str(patients[str(from_number)][1]))
+        # print (json_diagnosis[0])
         issues = get_issue_names(json_diagnosis)
         accuracies = get_issue_accuracy(json_diagnosis)
         suggested_specialists = get_suggested_specialists(json_diagnosis)
-        # print(suggested_specialists[0][0])
         lat_and_lng = get_geocode(patients[str(from_number)][3])
-        # print(str(lat_and_lng[0]))
-        # print(str(lat_and_lng[1]))
-        num_specialists = len(suggested_specialists[0])
-        doc_recommendations = get_nearby_doctors(suggested_specialists[0][num_specialists - 1], lat_and_lng)
+        # doc_recommendations = get_nearby_doctors(suggested_specialists[0][0], lat_and_lng)
         # num_docs = len(doc_recommendations)
-        # print (doc_recommendations[0].name)
         # num_display = 3 if num_docs > 3 else num_docs
         message = "In order of most likely to least likely, your diagnosis is: "
         for j in range(len(issues)):
             if j == len(issues) - 1:
-                message += issues[j] + " with an accuracy of " + str(accuracies[j]) + "."
+                message += issues[j] + " with an accuracy of" + str(accuracies[j]) + "."
             else:
-                message += issues[j] + " with an accuracy of " + str(accuracies[j]) + "; "
-
-        rec_msg = " We suggest you visit: " + doc_recommendations[0].name + " at " + doc_recommendations[0].address + " with rating " + str(doc_recommendations[0].ratings) + "/5. Open now: " + str(doc_recommendations[0].is_open) + ". "
-        message += rec_msg
-
-
+                message += issues[j] + " with an accuracy of" + str(accuracies[j]) + ";"
+        # message += " We suggest you visit:"
+        # i = 0
+        # while i < num_display:
+        #     message += doc_recommendations[i].name + " at" + doc_recommendations[i].address + " with rating " + doc_recommendations[i].ratings + "/5. Open now: " + doc_recommendations[i].is_open + ". "
+    
     else:
         session.clear()
 
