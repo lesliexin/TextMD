@@ -77,21 +77,34 @@ def hello():
                 .format(name, counter)
 
     elif counter == 3:
-        patients[str(from_number)][1] = str(text)
-
-        message = "\n\nWhat is your sex?"
+        try: 
+            int(str(text))
+            patients[str(from_number)][1] = str(text)
+            message = "\n\nWhat is your sex (male/female)?"
+        except ValueError:
+            counter -= 1
+            message = "Sorry, we do not understand. Please enter your birth year."
 
     elif counter == 4:
-        patients[str(from_number)][2] = str(text)
-        message = "\n\nNext we need your address.\nWhat is your unit number?"
+        if str(text).lower() != "male" or str(text).lower() != "female":
+            counter -= 1
+            message = "Sorry, we do not understand. Please enter your sex."
+        else:
+            patients[str(from_number)][2] = str(text)
+            message = "\n\nNext we need your address.\nWhat is your unit number?"
 
     elif counter == 5:
-        patients[str(from_number)][3] = str(text)
-        message = "\n\nWhat is your street name?"
+        try:
+            int(str(text))
+            patients[str(from_number)][3] = str(text)
+            message = "\n\nWhat is your street name?"
+        except:
+            counter -= 1
+            message = "Sorry, we do not understand. Please enter your unit number."
 
     elif counter == 6:
         patients[str(from_number)][3] += ('+' + str(text))
-        message = "\n\nWhat is your street suffix? (street, avenue, trail)"
+        message = "\n\nWhat is your street suffix? (e.g. street, avenue, trail)"
 
     elif counter == 7:
         patients[str(from_number)][3] += ('+' + str(text))
