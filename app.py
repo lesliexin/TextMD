@@ -1,8 +1,9 @@
 from flask import Flask, request, session
 from twilio.twiml.messaging_response import MessagingResponse
-from symptoms_options import get_locations, get_sublocations, get_symptoms
+from symptoms import get_locations, get_sublocations, get_symptoms, get_symptom_id
 from diagnosis_parser import get_issue_names, get_issue_accuracy, get_suggested_specialists
 from doctor_recommendation_provider import get_geocode, get_nearby_doctors
+from diagnosis_provider import get_diagnosis_json
 
 # The session object makes use of a secret key.
 SECRET_KEY = "a secret key"
@@ -11,9 +12,9 @@ app.config.from_object(__name__)
 
 # Try adding your own number to this list!
 patients = {
-    # "+14165581768": ["Leslie Xin", 0, "", ""],
-    "+14158675310": ["Finn Smith", 0, "", ""],
-    "+14158675311": ["Chewy White", 0, "", ""],
+    "+14165581768": ["Leslie Xin", 0, "", "", "location", "sublocation",[]],
+    "+14158675310": ["Finn Smith", 0, "", "", "location", "sublocation",[]],
+    "+14158675311": ["Chewy White", 0, "", "", "location", "sublocation",[]],
 }
 
 '''
@@ -58,18 +59,15 @@ def hello():
     # New user
     if counter == 1:
         # Ask for name
-        message = "\nHi there, what is your full name? counter is {}" \
-            .format(counter)
+        message = "\nHi there, what is your full name?"
 
     elif counter == 2:
         # Greeting
         if name == "":
             patients[str(from_number)] = []
-            message = "\n\nHi there, {}! Welcome to textMD! What year were you born? counter is {}" \
-                .format(text, counter)
+            message = "\n\nHi there, {}! Welcome to TextMD! What year were you born?"
         else:
-            message = "\n\nWelcome back, {}! What year were you born? counter is {}" \
-                .format(name, counter)
+            message = "\n\nWelcome back, {}! What year were you born?"
 
     elif counter == 3:
         try: 
@@ -98,23 +96,76 @@ def hello():
             message = "Sorry, we do not understand. Please enter your unit number."
 
     elif counter == 6:
-        patients[str(from_number)][3] += ('+' + str(text))
+        patients[str(from_number)][3] += ("+" + str(text))
         message = "\n\nWhat is your street suffix? (e.g. street, avenue, trail)"
 
     elif counter == 7:
-        patients[str(from_number)][3] += ('+' + str(text))
+        patients[str(from_number)][3] += ("+" + str(text))
         message = "\n\nWhat is your city?"
 
     elif counter == 8:
-        patients[str(from_number)][3] += (',+' + str(text))
+        patients[str(from_number)][3] += (",+" + str(text))
         message = "\n\nWhat is your province/state?"
 
     elif counter == 9:
-        patients[str(from_number)][3] += (',+' + str(text))
-        message = "\n\nThank you! \n {}, {}, {}, {}" \
+        patients[str(from_number)][3] += (",+" + str(text))
+        location_choices = get_locations()
+        location_string = ""
+        for i in range(len(location_choices)):
+            if len(location_choices) == 1:
+                location_string += location_choices[i]
+            else:
+                location_string += ", " + location_choices[i]
+        message = "\n\nThank you! \n {}, {}, {}, {}. Now, please tell us where your discomfort is located. Choose from: " + location_string \
             .format(patients[str(from_number)][0], patients[str(from_number)][1], patients[str(from_number)][2],
                     patients[str(from_number)][3])
 
+    elif counter == 10:
+        patients[str(from_number)][4] = str(text).lower()
+        sublocation_choices = get_sublocations(str(text).lower())
+        sublocation_string = ""
+        for i in range(len(sublocation_choices)):
+            if len(sublocation_choices) == 1:
+                sublocation_string += sublocation_choices[i]
+            else:
+                sublocation_string += ", " + sublocation_choices[i]
+        message = "Let's narrow down the issue. Please choose a more specific location of your discomfort: " + sublocation_string
+
+    elif counter == 11:
+        patients[str(from_number)][5] = str(text).lower()
+        symptom_choices = get_symptoms(str(text).lower())
+        symptom_string = ""
+        for i in range(len(symptom_choices)):
+            if len(symptom_choices) == 1:
+                symptom_string += symptom_choices[i]
+            else:
+                symptom_string += ", " + symptom_choices[i]
+        message = "Please tell us your symptoms, separated by a comma: " + symptom_string
+    
+    elif counter == 12:
+        symptom_array = str(text).lower().split(",")
+        symptom_ids = []
+        for symptom in symptom_array:
+            symptom_ids.append(get_symptom_id(symptom))
+        json_diagnosis = get_diagnosis_json(symptom_ids, patients[str(from_number)][2], str(patients[str(from_number)][1]))
+        issues = get_issue_names(json_diagnosis)
+        accuracies = get_issue_accuracy(json_diagnosis)
+        suggested_specialists = get_suggested_specialists(json_diagnosis)
+        lat_and_lng = get_geocode(patients[str(from_number)][3])
+        doc_recommendations = get_nearby_doctors(suggested_specialists[0][len(suggested_specialists[0] - 1)], lat_and_lng)
+        num_docs = len(doc_recommendations)
+        num_display = 3 if num_docs > 3 else num_docs
+        message = "In order of most likely to least likely, your diagnosis is: "
+        for j in range(len(issues)):
+            if j == len(issues) - 1:
+                message += issues[j] + " with an accuracy of" + str(accuracies[j] + ".")
+            else:
+                message += issues[j] + " with an accuracy of" + str(accuracies[j] + ";")
+        message += " We suggest you visit:"
+        i = 0
+        while i < num_display:
+            message += doc_recommendations[i].name + " at" + doc_recommendations[i].address + " with rating " + doc_recommendations[i].ratings + "/5. Open now: " + doc_recommendations[i].is_open + ". "
+    
     else:
         session.clear()
 
