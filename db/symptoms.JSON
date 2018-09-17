@@ -600,12 +600,6 @@
         "sublocation": "ear"
     },
     {
-        "id": 0,
-        "name": "test",
-        "location": "head",
-        "sublocation": "ear"
-    },
-    {
         "id": 86,
         "name": "feeling of pressure in the ear",
         "location": "head",

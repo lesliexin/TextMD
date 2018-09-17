@@ -151,6 +151,7 @@ def hello():
         symptom_array = str(text).lower().split(",")
         symptom_ids = []
         for symptom in symptom_array:
+<<<<<<< HEAD
             # print(symptom)
             symptom_ids.append(get_symptom_id(symptom))
             # print(symptom_ids)
@@ -160,12 +161,24 @@ def hello():
             return 
         if patients[str(from_number)][2] == None:
             # print('sex is null')
+=======
+            print(symptom)
+            symptom_ids.append(get_symptom_id(symptom))
+            print(symptom_ids)
+
+        if patients[str(from_number)][1] == None:
+            print('year is null')
+            return 
+        if patients[str(from_number)][2] == None:
+            print('sex is null')
+>>>>>>> 87ee2fca406c18eb4d29ff2d789ed92c105ebfd2
             return
         print(symptom_ids)
         json_diagnosis = get_diagnosis_json(symptom_ids, patients[str(from_number)][2], str(patients[str(from_number)][1]))
         issues = get_issue_names(json_diagnosis)
         accuracies = get_issue_accuracy(json_diagnosis)
         suggested_specialists = get_suggested_specialists(json_diagnosis)
+<<<<<<< HEAD
         # print(suggested_specialists[0][0])
         lat_and_lng = get_geocode(patients[str(from_number)][3])
         # print(str(lat_and_lng[0]))
@@ -174,18 +187,32 @@ def hello():
         doc_recommendations = get_nearby_doctors(suggested_specialists[0][num_specialists - 1], lat_and_lng)
         # num_docs = len(doc_recommendations)
         # print (doc_recommendations[0].name)
+=======
+        # lat_and_lng = get_geocode(patients[str(from_number)][3])
+        # doc_recommendations = get_nearby_doctors(suggested_specialists[0][0], lat_and_lng)
+        # num_docs = len(doc_recommendations)
+>>>>>>> 87ee2fca406c18eb4d29ff2d789ed92c105ebfd2
         # num_display = 3 if num_docs > 3 else num_docs
         message = "In order of most likely to least likely, your diagnosis is: "
         for j in range(len(issues)):
             if j == len(issues) - 1:
                 message += issues[j] + " with an accuracy of " + str(accuracies[j]) + "."
             else:
+<<<<<<< HEAD
                 message += issues[j] + " with an accuracy of " + str(accuracies[j]) + "; "
 
         rec_msg = " We suggest you visit: " + doc_recommendations[0].name + " at " + doc_recommendations[0].address + " with rating " + str(doc_recommendations[0].ratings) + "/5. Open now: " + str(doc_recommendations[0].is_open) + ". "
         message += rec_msg
 
 
+=======
+                message += issues[j] + " with an accuracy of " + str(accuracies[j]) + ";"
+        # message += " We suggest you visit:"
+        # i = 0
+        # while i < num_display:
+        #     message += str(doc_recommendations[i].name) + " at" + str(doc_recommendations[i].address) + " with rating " + str(doc_recommendations[i].ratings) + "/5. Open now: " + str(doc_recommendations[i].is_open) + ". "
+    
+>>>>>>> 87ee2fca406c18eb4d29ff2d789ed92c105ebfd2
     else:
         session.clear()
 
